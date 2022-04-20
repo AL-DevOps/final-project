@@ -66,30 +66,56 @@ STATES_CAPITALS = {
     'West Virginia' : 'Charleston',
     'Wisconsin' : 'Madison',
     'Wyoming' : 'Cheyenne',
+    'Andrey' : 'City',
 }
 
-
+# 1. Print the state capital of Idaho
 def capital_of_Idaho():
-    # Your code here
-    pass
+    state1 = "Idaho"
+    state_capital1 = STATES_CAPITALS[state1]
 
+    print(f"1. State capital of {state1} - {state_capital1}")
+
+
+#2. Print all states
 def all_states():
-    # Your code here
-    pass
+    print (f"2. US states:")
+    for key in STATES_CAPITALS.keys():
+        print (f" {key}")
 
+#3. Print all capitals.
 def all_capitals():
-    # Your code here
-    pass
+    print (f"3. US state capitals:")
+    for value in STATES_CAPITALS.values():
+        print (f" {value}")
 
+#4. Create a single string 'Alabama -> Montgomery, Alaska -> Juneau, ...'
 def states_capitals_string():
-    # Your code here
-    pass
+    single_string=""
+    print (f"4. String: state -> state capitals:")
+    for key, value in STATES_CAPITALS.items():
+        single_string = single_string + (f", {key} -> {value}")
+    print (single_string[2:])
 
+#5. Ensure the string you created in 4. is alphabetically sorted by state
+def states_capitals_string_sorted():
 
+    STATES_CAPITALS_sorted = dict(sorted(STATES_CAPITALS.items(), key=lambda x: x[0]))
 
+    single_string=""
+    print (f"5. Sorted string: state -> state capitals:")
+    for key, value in STATES_CAPITALS_sorted.items():
+        single_string = single_string + (f", {key} -> {value}")
+    print (single_string[2:])
+
+#7. Now we want to add the reverse look up, given the name of a capital what state is it in?
 def get_state(capital):
-    pass
-
+    state_string=""
+    for key, value in STATES_CAPITALS.items():
+        if value == capital:
+            state_string = state_string + (f", {key}")
+    print (f"{capital} is the capital of the {state_string[2:]}")
+    return state_string[2:]
 
 
 def test_state_to_capital():
@@ -116,3 +142,12 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
+
+
+
+# capital_of_Idaho()
+# all_states()
+# all_capitals()
+# states_capitals_string()
+# states_capitals_string_sorted()
+# get_state('City')
