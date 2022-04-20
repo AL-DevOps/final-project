@@ -9,7 +9,7 @@ Create a function that returns a list of 4 character strings:
 Example: ['mont', 'y py', 'thon', 's fl', 'ying', ' cir', 'cus']
 ### git comment
 """
-#import pytest
+import pytest
 
 # 1. Create a function that returns a sorted string with no duplicate characters (keep any whitespace): Example: ' cfghilmnoprstuy'
 def no_duplicates(a_string):
@@ -60,10 +60,10 @@ def main():
     return pytest.main(__file__)
 
 
-#if __name__ == '__main__':
- #   main()
+if __name__ == '__main__':
+   main()
 
-a_string ='monty pythons flying circus'
-print(no_duplicates(a_string))
-print(reversed_words(a_string))
-print(four_char_strings(a_string))
+# a_string ='monty pythons flying circus'
+# print(no_duplicates(a_string))
+# print(reversed_words(a_string))
+# print(four_char_strings(a_string))
