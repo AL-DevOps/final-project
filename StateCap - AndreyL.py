@@ -145,7 +145,6 @@ if __name__ == '__main__':
     sys.exit(main())
 
 
-
 # capital_of_Idaho()
 # all_states()
 # all_capitals()
